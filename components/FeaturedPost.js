@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import InfoPost from "./InfoPost";
 
-function featuredPost(props) {
+function featuredPost() {
   return (
     <article>
       <div className="-mx-4 flex flex-wrap items-start lg:items-center">

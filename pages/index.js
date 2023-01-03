@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Head from "next/head";
 import FeaturedPost from "../components/FeaturedPost";
 import CardPost from "../components/CardPost";
@@ -20,16 +21,15 @@ import mockPosts from "../utils/posts.json";
 //   return { props: { featured: featured.data[0] } };
 // }
 
-export default function Home({ featured }) {
-  console.log(featured);
-  const [posts, setPosts] = useState(mockPosts);
+export default function Home() {
+  const [posts] = useState(mockPosts);
   return (
     <Layout>
       <Head>
         <title>Home &mdash; Epicblog</title>
       </Head>
       <Container>
-        <FeaturedPost {...featured} />
+        <FeaturedPost />
         <div className="-mx-4 mt-6 flex flex-wrap">
           {posts.map((post) => (
             <div key={post.id} className="mt-4 w-full px-4 md:w-4/12">
