@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import InfoPost from "./InfoPost";
@@ -9,7 +10,7 @@ function featuredPost() {
         <div className="px-4 md:w-7/12 lg:w-8/12">
           <Link href="/detail">
             <a>
-              <img
+              <Image
                 src="/assets/featured-thumbnail.png"
                 alt=""
                 className="mb-4 w-full rounded-xl transition duration-300 hover:scale-105 md:mb-0"

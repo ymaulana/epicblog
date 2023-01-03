@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 import Container from "../components/Container";
 import Layout from "../components/Layout";
@@ -26,7 +27,7 @@ function Detail() {
           />
         </div>
         <div className="mx-auto my-10 w-full md:w-10/12">
-          <img
+          <Image
             src="/assets/detail-thumbnail.png"
             className="w-full rounded-lg"
             alt=""
