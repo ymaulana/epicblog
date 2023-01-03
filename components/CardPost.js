@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Link from "next/link";
 import React from "react";
 import InfoPost from "./InfoPost";
@@ -10,7 +11,7 @@ function CardPost({ thumbnail, ...infoPost }) {
           <img
             src={thumbnail}
             alt=""
-            className="w-full rounded mb-4 hover:scale-105 transition duration-300"
+            className="mb-4 w-full rounded transition duration-300 hover:scale-105"
           />
         </a>
       </Link>

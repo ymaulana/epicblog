@@ -8,7 +8,7 @@ import SectionHeader from "../components/SectionHeader";
 import Head from "next/head";
 
 function Posts() {
-  const [posts, setPosts] = useState(mockPosts);
+  const [posts] = useState(mockPosts);
   return (
     <Layout>
       <Head>
@@ -17,17 +17,17 @@ function Posts() {
       <Container>
         <SectionHeader>UI Design</SectionHeader>
         {!posts.length ? (
-          <div className="text-center py-16">
+          <div className="py-16 text-center">
             <h2 className="text-5xl">No result 😢</h2>
-            <p className="text-xl mt-6 md:w-8/12 w-full mx-auto text-tosca/60">
+            <p className="mx-auto mt-6 w-full text-xl text-tosca/60 md:w-8/12">
               We couldn’t find any posts with the keyword `yahahahayuk`. Please
               try another keyword.
             </p>
           </div>
         ) : (
-          <div className="flex flex-wrap -mx-4 mt-6">
+          <div className="-mx-4 mt-6 flex flex-wrap">
             {posts.map((post) => (
-              <div key={post.id} className="md:w-4/12 w-full px-4 mt-4">
+              <div key={post.id} className="mt-4 w-full px-4 md:w-4/12">
                 <CardPost {...post} />
               </div>
             ))}

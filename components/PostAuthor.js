@@ -1,16 +1,17 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 
 function PostAuthor({ authorAvatar, authorName, authorJob }) {
   return (
-    <div className="flex item-center mt-5">
+    <div className="item-center mt-5 flex">
       <img
         src={authorAvatar}
         alt=""
-        className="w-14 h-14 rounded-full object-cover"
+        className="h-14 w-14 rounded-full object-cover"
       />
       <div className="ml-4">
         <h3>{authorName} </h3>
-        <h3 className="text-tosca/60 text-sm mt-1">{authorJob}</h3>
+        <h3 className="mt-1 text-sm text-tosca/60">{authorJob}</h3>
       </div>
     </div>
   );

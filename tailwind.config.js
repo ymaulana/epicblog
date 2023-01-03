@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
@@ -18,8 +19,6 @@ module.exports = {
       fontFamily: {
         sans: ["Roboto", "Arial", "sans-serif"],
       },
-    },
-    extend: {
       colors: {
         darkBlue: "#1B1D36",
         lightBlue: "#2F325C",
