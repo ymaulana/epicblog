@@ -6,13 +6,15 @@ import InfoPost from "./InfoPost";
 function featuredPost() {
   return (
     <article>
-      <div className="-mx-4 flex flex-wrap items-start lg:items-center">
-        <div className="px-4 md:w-7/12 lg:w-8/12">
+      <div className="-mx-4 flex flex-wrap items-start md:flex-nowrap lg:items-center">
+        <div className="relative mx-4 mb-8 h-[400px] w-full md:w-7/12 lg:w-8/12">
           <Link href="/detail">
             <a>
               <Image
                 src="/assets/featured-thumbnail.png"
-                alt=""
+                alt="thumbnail"
+                layout="fill"
+                objectFit="cover"
                 className="mb-4 w-full rounded-xl transition duration-300 hover:scale-105 md:mb-0"
               />
             </a>

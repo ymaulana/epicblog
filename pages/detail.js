@@ -27,11 +27,15 @@ function Detail() {
           />
         </div>
         <div className="mx-auto my-10 w-full md:w-10/12">
-          <Image
-            src="/assets/detail-thumbnail.png"
-            className="w-full rounded-lg"
-            alt=""
-          />
+          <div className="relative h-[300px] w-[full] md:h-[400px] lg:h-[500px]">
+            <Image
+              src="/assets/detail-thumbnail.png"
+              className="w-full rounded-lg"
+              alt="thumbnail"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
         </div>
         <div className="mx-auto w-full leading-relaxed md:w-8/12">
           <p className="mb-4 text-xl">

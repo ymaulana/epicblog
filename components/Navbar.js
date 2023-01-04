@@ -13,7 +13,7 @@ function Navbar() {
     { text: "Open Source", href: "/posts" },
   ];
   return (
-    <nav className="py-10">
+    <nav className="relative z-50 py-10">
       <Container>
         <div className="flex items-center">
           <div className="w-3/12 lg:hidden ">
@@ -55,17 +55,17 @@ function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="lg:w-2/12 w-6/12 ">
+          <div className="w-6/12 lg:w-2/12 ">
             <Link href="/">
               <a className="flex items-center justify-center lg:justify-start">
-                <div className="w-10 h-10 bg-lightPink rounded text-darkBlue flex items-center justify-center text-xl mr-4 shadow-2xl">
+                <div className="mr-4 flex h-10 w-10 items-center justify-center rounded bg-lightPink text-xl text-darkBlue shadow-2xl">
                   E
                 </div>
                 Epicblog
               </a>
             </Link>
           </div>
-          <div className="w-3/12 lg:hidden text-right">
+          <div className="w-3/12 text-right lg:hidden">
             <button onClick={() => setSearch(!search)}>
               <svg
                 className="inline-block"
@@ -95,7 +95,7 @@ function Navbar() {
             </button>
           </div>
           <div
-            className={`lg:w-7/12 w-full bg-darkBlue lg:bg-none fixed lg:static top-0 h-full lg:h-auto p-10 lg:p-0 transition-all ${
+            className={`fixed top-0 h-full w-full bg-darkBlue p-10 transition-all lg:static lg:h-auto lg:w-7/12 lg:bg-none lg:p-0 ${
               offCanvas ? "left-0" : "-left-full"
             }`}
           >
@@ -119,31 +119,31 @@ function Navbar() {
                 <line x1="6" y1="6" x2="18" y2="18"></line>
               </svg>
             </button>
-            <ul className="lg:space-x-14 flex lg:items-center flex-col lg:flex-row space-y-4 lg:space-y-0">
+            <ul className="flex flex-col space-y-4 lg:flex-row lg:items-center lg:space-x-14 lg:space-y-0">
               <li>
                 <Link href="/posts">
-                  <a className="hover:underline hover:text-lightPink">
+                  <a className="hover:text-lightPink hover:underline">
                     UI Design
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/posts">
-                  <a className="hover:underline hover:text-lightPink">
+                  <a className="hover:text-lightPink hover:underline">
                     Front-End
                   </a>
                 </Link>
               </li>
               <li>
                 <Link href="/posts">
-                  <a className="hover:underline hover:text-lightPink">
+                  <a className="hover:text-lightPink hover:underline">
                     Back-End
                   </a>
                 </Link>
               </li>
               <li className="relative">
                 <a
-                  className="hover:underline hover:text-lightPink cursor-pointer flex items-center"
+                  className="flex cursor-pointer items-center hover:text-lightPink hover:underline"
                   onClick={() => setDropDown(!dropDown)}
                 >
                   Other
@@ -166,7 +166,7 @@ function Navbar() {
                 </a>
 
                 {dropDown && (
-                  <ul className="absolute w-[200px] bg-gray-900 rounded shadow-2xl mt-4">
+                  <ul className="absolute mt-4 w-[200px] rounded bg-gray-900 shadow-2xl">
                     {dropDownList.map(({ text, href }) => (
                       <li
                         key={text}
@@ -185,7 +185,7 @@ function Navbar() {
             </ul>
           </div>
           <div
-            className={`lg:w-3/12 absolute lg:static w-full left-0 px-10 lg:px-0 transition-all ${
+            className={`absolute left-0 w-full px-10 transition-all lg:static lg:w-3/12 lg:px-0 ${
               search ? "top-10" : "-top-40"
             } `}
           >
@@ -210,7 +210,7 @@ function Navbar() {
               </svg>
             </button>
             <input
-              className="bg-lightBlue lg:rounded-full rounded-lg py-2 px-6 w-full bg-search pl-12"
+              className="w-full rounded-lg bg-lightBlue py-2 px-6 pl-12 bg-search lg:rounded-full"
               type="text"
               placeholder="Search ... "
             />

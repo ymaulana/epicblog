@@ -1,13 +1,14 @@
-/* eslint-disable react/prop-types */
 import Image from "next/image";
 import React from "react";
 
 function PostAuthor({ authorAvatar, authorName, authorJob }) {
   return (
-    <div className="item-center mt-5 flex">
+    <div className="item-center my-5 flex">
       <Image
         src={authorAvatar}
-        alt=""
+        alt="avatar"
+        width={50}
+        height={50}
         className="h-14 w-14 rounded-full object-cover"
       />
       <div className="ml-4">

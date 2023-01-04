@@ -1,8 +1,7 @@
-/* eslint-disable react/react-in-jsx-scope */
+import React, { useState } from "react";
 import Head from "next/head";
 import FeaturedPost from "../components/FeaturedPost";
 import CardPost from "../components/CardPost";
-import { useState } from "react/cjs/react.development";
 import Container from "../components/Container";
 import Layout from "../components/Layout";
 import mockPosts from "../utils/posts.json";
@@ -24,20 +23,22 @@ import mockPosts from "../utils/posts.json";
 export default function Home() {
   const [posts] = useState(mockPosts);
   return (
-    <Layout>
-      <Head>
-        <title>Home &mdash; Epicblog</title>
-      </Head>
-      <Container>
-        <FeaturedPost />
-        <div className="-mx-4 mt-6 flex flex-wrap">
-          {posts.map((post) => (
-            <div key={post.id} className="mt-4 w-full px-4 md:w-4/12">
-              <CardPost {...post} />
-            </div>
-          ))}
-        </div>
-      </Container>
-    </Layout>
+    <>
+      <Layout>
+        <Head>
+          <title>Home &mdash; Epicblog</title>
+        </Head>
+        <Container>
+          <FeaturedPost />
+          <div className="-mx-4 mt-6 flex flex-wrap">
+            {posts.map((post) => (
+              <div key={post.id} className="mt-4 w-full px-4 md:w-4/12">
+                <CardPost {...post} />
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Layout>
+    </>
   );
 }

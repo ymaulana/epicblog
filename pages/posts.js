@@ -8,7 +8,7 @@ import SectionHeader from "../components/SectionHeader";
 import Head from "next/head";
 
 function Posts() {
-  const [posts] = useState(mockPosts);
+  const [posts, setPosts] = useState(mockPosts);
   return (
     <Layout>
       <Head>

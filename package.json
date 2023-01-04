@@ -28,5 +28,13 @@
   "version": "1.0.0",
   "main": "postcss.config.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ymaulana/epicblog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ymaulana/epicblog/issues"
+  },
+  "homepage": "https://github.com/ymaulana/epicblog#readme"
 }
